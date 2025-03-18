@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Telefon Bul</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar .nav-link {
+            font-size: 1.25rem;
+            padding: 0.75rem 1.5rem;
+        }
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Fantasy';
+            font-size: 4rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+                <img src="/images/teknokiyaslogo1.png" alt="TeknoKiyas Logo" style="height: 150px;">
+            </a>
+            <span class="navbar-center">Kıyas Başlasın</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#search">Telefon Ara</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#campaigns">Kampanyalar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Telefon Ara</h1>
+        <form method="POST" action="search.php">
+            <div class="mb-3">
+                <label>Fiyat Aralığı:</label>
+                <input type="number" name="min_price" class="form-control" placeholder="Min Fiyat">
+                <input type="number" name="max_price" class="form-control" placeholder="Max Fiyat">
+            </div>
+            <div class="mb-3">
+                <label>İşletim Sistemi:</label>
+                <select name="os" class="form-select">
+                    <option value="Android">Android</option>
+                    <option value="iOS">iOS</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Ara</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'921ed4545e2d4332',t:'MTc0MjIzOTAzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
